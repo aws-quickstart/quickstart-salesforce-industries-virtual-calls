@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: (qs-1tmnastsb)
+Metadata:
+  LICENSE: Apache License, Version 2.0
+  LintSpellExclude:
+    - Salesforce
+  # AWS::CloudFormation::Interface:
+  #   ParameterGroups:
+  #     - Label:
+  #         default: Display name
+  #       Parameters:
+  #         - ParameterName
+  #   ParameterLabels:
+  #     ParameterName:
+  #       default: Display name
+# Parameters:
+# Resources:
+Outputs:
+  Postdeployment:
+    Description: See the deployment guide for postdeployment steps.
+    Value: https://aws-quickstart.github.io/quickstart-salesforce-industries-virtual-calls/#_postdeployment_steps
