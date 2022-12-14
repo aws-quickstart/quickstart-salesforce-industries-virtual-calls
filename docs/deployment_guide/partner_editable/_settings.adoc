@@ -6,9 +6,9 @@
 :partner-company-name: Salesforce, Inc
 :doc-month: January
 :doc-year: 2023
-:partner-contributors: Harsha Talkad and Vandana Sreenivasa Rao, {partner-company-name}
+:partner-contributors: Conor Fanlo and Arunkumar Tharanichelvan, {partner-company-name}
 // :other-contributors: Akua Mansa, Trek10
-:aws-contributors: Chris Riley, AWS Strategic Accounts team
+:aws-contributors: Chris Riley and Ariana Rahgozar, AWS Strategic Accounts team
 :aws-ia-contributors: Vinod Shukla, AWS Integration & Automation team
 :deployment_time: 5 minutes
 :default_deployment_region: us-east-1
