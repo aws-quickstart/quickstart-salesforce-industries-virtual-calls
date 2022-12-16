@@ -589,4 +589,4 @@ Resources:
 Outputs:
   Postdeployment:
     Description: See the deployment guide for postdeployment steps.
-    Value: https://fwd.aws/3K8Wm?/#_postdeployment_steps
+    Value: https://aws-quickstart.github.io/quickstart-salesforce-industries-virtual-calls/#_postdeployment_steps
