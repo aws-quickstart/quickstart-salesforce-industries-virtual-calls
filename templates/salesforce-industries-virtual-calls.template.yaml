@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: AWS CloudFormation template to create resources required to send Amazon Chime events to Salesforce. (qs-1ssngicuj)
+Description: AWS CloudFormation template to create resources required to send Amazon Chime events to Salesforce. (qs-1tmnastsb)
 Metadata:
   LintSpellExclude:
     - Salesforce
