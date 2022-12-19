@@ -252,7 +252,7 @@ Parameters:
     Type: String
     Description: >-
       Name for the AWS IAM group that grants the AWS IAM user account the
-      necessary permissions via the associated managed VirtualCareUserPolicy
+      necessary permissions via the associated managed VirtualVisitUserPolicy
       IAM policy.
     MinLength: 1
     MaxLength: 128
@@ -278,7 +278,7 @@ Resources:
       GroupName: !Ref IamGroupName
       Path: /salesforce/
       Policies:
-        - PolicyName: VirtualCareUserPolicy
+        - PolicyName: VirtualVisitUserPolicy
           PolicyDocument:
             Version: 2012-10-17
             Statement:
@@ -399,7 +399,7 @@ Resources:
               StartMeetingTranscription and StopMeetingTranscription require a
               wildcard resource, and cfn-lint v0.64.1 incorrectly alerts on this.
     Properties:
-      RoleName: VirtualCareRole
+      RoleName: VirtualVisitRole
       AssumeRolePolicyDocument:
         Version: 2012-10-17
         Statement:
@@ -408,7 +408,7 @@ Resources:
               AWS: !GetAtt IamUser.Arn
             Action: sts:AssumeRole
       Policies:
-        - PolicyName: VirtualCareRolePolicy
+        - PolicyName: VirtualVisitRolePolicy
           PolicyDocument:
             Version: 2012-10-17
             Statement:
