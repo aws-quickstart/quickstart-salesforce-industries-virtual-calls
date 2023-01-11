@@ -7,14 +7,14 @@ AWS Cloud.
 
 [#architecture1]
 .Architecture for {partner-product-short-name} on AWS
-image::../docs/deployment_guide/images/architecture-diagram-salesforce-health-cloud-virtual-care.png[Architecture]
+image::../docs/deployment_guide/images/architecture-diagram-salesforce-industries-virtual-calls.png[Architecture]
 
 As shown in <<architecture1>>, this Partner Solution sets up the following:
 
-* Amazon Chime SDK control plane for receiving requests from Salesforce Industry Cloud when users request appointments through their industry application.
+* Amazon Chime SDK control plane for receiving requests from Salesforce Industry Cloud when consumers request appointments through their industry cloud provider application.
 * A default event bus for receiving event notifications from the control plane and delivering them to Amazon EventBridge.
 * An Amazon EventBridge rule that filters aws.chime events and a predefined https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-transform-target-input.html[input transformer rule^] that modifies the event and creates a https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_intro.htm[{partner-company-short-name} platform event^].
-* During an active session via a {partner-company-short-name}-connected app, Amazon Chime SDK communicates to the Amazon Chime media services endpoint to receive transcription requests.
+* During an active session via a {partner-company-short-name}-connected app, Amazon Chime SDK to communicate to the Amazon Chime media services endpoint to receive transcription requests.
 
 * Amazon Transcribe for receiving and processing transcription requests.
 * For event delivery failure handling:
