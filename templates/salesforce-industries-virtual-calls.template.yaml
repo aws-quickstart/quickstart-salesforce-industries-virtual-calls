@@ -136,10 +136,10 @@ Parameters:
   SalesforcePlatformEventEndpointRateLimit:
     Type: Number
     Description: >-
-      Rate limit for Amazon EventBridge to the Salesforce platform event
-      endpoint. The default soft limit is 25 for Production organizations &
-      Sandboxes, and 5 for Developer Edition & Trial
-      organizations. Reference:
+      Rate limit for the Salesforce platform event endpoint to avoid exceeding API limits and 
+      initiating throttling of requests. The default soft limit is 25 for production organizations and
+      sandboxes, and five for Developer Edition and trial
+      organizations. For details, refer to:
       'https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm'.
     MinValue: 1
     Default: 25
@@ -218,7 +218,7 @@ Parameters:
   DlqQueueDepthAlarmEvaluationPeriods:
     Type: Number
     Description: >-
-      Number of periods over which the number messages in the dead-letter
+      Number of periods over which the number of messages in the dead-letter
       queue is compared to the specified threshold.
     MinValue: 1
     Default: 1
@@ -226,8 +226,7 @@ Parameters:
     Type: Number
     Description: >-
       Threshold number of messages in the dead-letter queue to trigger an
-      alarm. If set to 0, the Amazon CloudWatch alarm and Amazon SNS topic will
-      not be deployed, disabling dead-letter queue monitoring and email
+      alarm. If set to 0, the Amazon CloudWatch alarm and Amazon SNS topic are not deployed, disabling dead-letter queue monitoring and email
       alerts.
     MinValue: 0
     Default: 10
@@ -426,7 +425,7 @@ Resources:
     Properties:
       AWSServiceName: transcription.chime.amazonaws.com
       Description: >-
-        Amazon Chime service-linked role with pre-defined permissions to allow
+        Amazon Chime service-linked role with predefined permissions to allow
         the service to call other AWS services on your behalf for performing
         transcription.
   SalesforceApiDestinationRole:
