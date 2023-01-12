@@ -1,5 +1,5 @@
 
-## quickstart-salesforce-industries-virtual-calls—Quick Start
+## Salesforce Industries Virtual Calls—Partner Solution
 
 For architectural details, step-by-step instructions, and customization options, see the [deployment guide](https://aws-quickstart.github.io/quickstart-salesforce-industries-virtual-calls/).
 
