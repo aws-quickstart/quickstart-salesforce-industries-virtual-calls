@@ -1,0 +1,26 @@
+:xrefstyle: short
+
+Deploying this Partner Solution with default parameters builds the following {partner-product-short-name} environment in the
+AWS Cloud.
+
+// Replace this example diagram with your own. Follow our wiki guidelines: https://w.amazon.com/bin/view/AWS_Quick_Starts/Process_for_PSAs/#HPrepareyourarchitecturediagram. Upload your source PowerPoint file to the GitHub {deployment name}/docs/images/ directory in its repository.
+
+[#architecture1]
+.Architecture for {partner-product-short-name} on AWS
+image::../docs/deployment_guide/images/architecture-diagram-salesforce-industries-virtual-calls.png[Architecture]
+
+As shown in <<architecture1>>, this Partner Solution sets up the following:
+
+* Amazon Chime SDK control plane for receiving requests from Salesforce Industry Cloud when consumers request appointments through their industry cloud provider application.
+* A default event bus for receiving event notifications from the control plane and delivering them to Amazon EventBridge.
+* An Amazon EventBridge rule that filters aws.chime events and a predefined https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-transform-target-input.html[input transformer rule^] that modifies the event and creates a https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_intro.htm[{partner-company-short-name} platform event^].
+* During an active session via a {partner-company-short-name}-connected app, Amazon Chime SDK to communicate to the Amazon Chime media services endpoint to receive transcription requests.
+
+* Amazon Transcribe for receiving and processing transcription requests.
+* For event delivery failure handling:
+** An Amazon Simple Queue Service (Amazon SQS) queue that serves as a https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rule-dlq.html[dead-letter queue^].
+** AWS Key Management Service (AWS KMS) to encrypt all messages stored in the Amazon SQS queue.
+** An Amazon CloudWatch alarm that monitors the Amazon SQS queue depth and alerts when the configured threshold is exceeded.
+** An Amazon Simple Notification Service (Amazon SNS) topic to send email notifications to interested parties when the CloudWatch alarm is triggered.
+
+* An AWS Secrets Manager secret for securely storing {partner-company-short-name} credentials and connection secrets.
