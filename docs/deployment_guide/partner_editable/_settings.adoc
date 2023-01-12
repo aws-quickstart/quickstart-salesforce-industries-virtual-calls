@@ -8,7 +8,7 @@
 :partner-company-name: Salesforce, Inc.
 :doc-month: January
 :doc-year: 2023
-:partner-contributors: Nick Furci, Conor Fanlo, Arun ?, and Aditya Poorsala, {partner-company-name}
+:partner-contributors: Conor Fanlo, Arunkumar Tharanichelvan, and Aditya Poorsala, {partner-company-name}
 // :other-contributors: Akua Mansa, Trek10
 :aws-contributors: Chris Riley and Ariana Rahgozar, AWS Strategic Accounts team
 :aws-ia-contributors: Vinod Shukla, AWS Integration & Automation team
