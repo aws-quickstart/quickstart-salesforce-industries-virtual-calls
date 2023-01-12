@@ -5,7 +5,7 @@
 :partner-company-short-name: Salesforce
 :partner-product-name: {partner-company-short-name} Industries: Virtual Calls
 :partner-product-short-name: Virtual Calls
-:partner-company-name: Salesforce, Inc
+:partner-company-name: Salesforce, Inc.
 :doc-month: January
 :doc-year: 2023
 :partner-contributors: Nick Furci, Conor Fanlo, Arun ?, and Aditya Poorsala, {partner-company-name}
