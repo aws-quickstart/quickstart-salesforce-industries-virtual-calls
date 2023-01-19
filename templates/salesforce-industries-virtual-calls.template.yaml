@@ -102,7 +102,7 @@ Parameters:
   SalesforceOAuthClientID:
     Type: String
     Description: >-
-      Salesforce-provided OAuth client ID to be stored in
+      Salesforce Connected App OAuth client ID to be stored in
       AWS Secrets Manager and used by Amazon EventBridge for authentication
       when sending events.
     NoEcho: True
@@ -110,7 +110,7 @@ Parameters:
   SalesforceOAuthClientSecret:
     Type: String
     Description: >-
-      Salesforce-provided OAuth client secret to be stored in
+      Salesforce Connected App OAuth client secret to be stored in
       AWS Secrets Manager and used by Amazon EventBridge for authentication
       when sending events.
     NoEcho: True
@@ -234,7 +234,7 @@ Parameters:
   IamUserName:
     Type: String
     Description: >-
-      User name for the AWS IAM user account used as the Salesforce Named Credential service account.
+      User name to create in AWS IAM user account and used as the Salesforce Named Credential service account.
     MinLength: 1
     MaxLength: 64
     AllowedPattern: ^[\w+=,.@-]+$
@@ -244,7 +244,7 @@ Parameters:
   IamPassword:
     Type: String
     Description: >-
-      Password for the AWS IAM user account used as the Salesforce Named Credential service account.
+      Password to create in the AWS IAM user account and used as the Salesforce Named Credential service account.
     NoEcho: True
     MinLength: 8
     MaxLength: 128
@@ -252,7 +252,7 @@ Parameters:
     Type: String
     Description: >-
       Name for the AWS IAM group that grants the AWS IAM user account the
-      necessary permissions via the associated managed VirtualVisitUserPolicy
+      necessary permissions via the associated managed VirtualCallsUserPolicy
       IAM policy.
     MinLength: 1
     MaxLength: 128
@@ -278,7 +278,7 @@ Resources:
       GroupName: !Ref IamGroupName
       Path: /salesforce/
       Policies:
-        - PolicyName: VirtualVisitUserPolicy
+        - PolicyName: VirtualCallsUserPolicy
           PolicyDocument:
             Version: 2012-10-17
             Statement:
@@ -399,7 +399,7 @@ Resources:
               StartMeetingTranscription and StopMeetingTranscription require a
               wildcard resource, and cfn-lint v0.64.1 incorrectly alerts on this.
     Properties:
-      RoleName: VirtualVisitRole
+      RoleName: VirtualCallsRole
       AssumeRolePolicyDocument:
         Version: 2012-10-17
         Statement:
@@ -408,7 +408,7 @@ Resources:
               AWS: !GetAtt IamUser.Arn
             Action: sts:AssumeRole
       Policies:
-        - PolicyName: VirtualVisitRolePolicy
+        - PolicyName: VirtualCallsRolePolicy
           PolicyDocument:
             Version: 2012-10-17
             Statement:
