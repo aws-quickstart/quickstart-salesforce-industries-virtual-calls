@@ -2,8 +2,20 @@ project:
   name: quickstart-salesforce-industries-virtual-calls
   owner: quickstart-eng@amazon.com
   template: templates/salesforce-industries-virtual-calls.template.yaml
-  # parameters:
-  # regions:
+  parameters:
+    SalesforceUsername: override
+    SalesforcePassword: override
+    SalesforceOAuthClientID: override
+    SalesforceOAuthClientSecret: override
+    SalesforceAuthorizationEndpoint: override
+    SalesforcePlatformEventEndpoint: override
+    SalesforcePlatformEventEndpointRateLimit: 5
+    DlqAlarmEmail: override
+    IamUserName: $[taskcat_genpass_8A]
+    IamPassword: $[taskcat_genpass_128S]
+    IamGroupName: $[taskcat_genpass_8A]
+  regions:
+    - us-east-1
 tests:
   defaults:
     regions:
