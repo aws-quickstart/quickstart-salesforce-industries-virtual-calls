@@ -4,5 +4,5 @@ This Partner Solution provides the following deployment option for provisioning 
 
 https://fwd.aws/P7jzX?[Deploy {partner-product-short-name} into a new AWS account^] 
 
-To upgrade {partner-product-short-name} resources in an existing AWS account, refer to link:#_postdeployment#upgrade-an-existing-deployment-of-partner-product-short-name[Upgrade an existing deployment of {partner-product-short-name}] for details. 
+To upgrade {partner-product-short-name} resources in an existing AWS account, refer to link:#_postdeployment#upgrade[Upgrade an existing deployment of {partner-product-short-name}] for details. 
 
