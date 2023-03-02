@@ -6,7 +6,7 @@
 :partner-product-name: {partner-company-short-name} Industries: Virtual Calls
 :partner-product-short-name: Virtual Calls
 :partner-company-name: Salesforce, Inc.
-:doc-month: January
+:doc-month: March
 :doc-year: 2023
 :partner-contributors: Conor Fanlo, Arunkumar Tharanichelvan, and Aditya Poorsala, {partner-company-name}
 // :other-contributors: Akua Mansa, Trek10
