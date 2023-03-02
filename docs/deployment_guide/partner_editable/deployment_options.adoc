@@ -9,7 +9,7 @@ https://fwd.aws/P7jzX?[Deploy {partner-product-short-name} into a new AWS accoun
 If you've already deployed {partner-product-short-name} and just need to upgrade your existing deployment, perform the following steps:
 
 . Do the following steps to download the latest template file from GitHub:
-.. Navigate to the https://fwd.aws/VVvWr?[Partner Solution landing page].
+.. Navigate to the https://fwd.aws/VVvWr?[Partner Solution landing page^].
 .. Choose *View the source code for this Partner Solution* to open the GitHub repository.
 .. Open the *template* folder to access the latest CloudFormation template. 
 .. Download the template. 
