@@ -6,5 +6,7 @@ https://fwd.aws/P7jzX?[Deploy {partner-product-short-name} into a new AWS accoun
 
 To upgrade {partner-product-short-name} resources in an existing AWS account, refer to link:#_postdeployment_steps[Upgrade an existing deployment of {partner-product-short-name}] for details
 
+refer to link:#_postdeployment[Upgrade an existing deployment of {partner-product-short-name}] for details. 
+refer to link:#_post_deployment[Upgrade an existing deployment of {partner-product-short-name}] for details.
 refer to link:#_upgrade_an_existing_deployment_of_Virtual_Calls[Upgrade an existing deployment of {partner-product-short-name}] for details. 
 
