@@ -14,3 +14,15 @@ To use AWS Identity and Access Management (IAM) to retrieve the user's access ke
 . Under the *Access Key* section, choose *Create access key*. This action creates an access key and allows you to copy or download the contents.
 
 The access key ID and secret access key is used to configure a {partner-company-short-name} Named Credential.
+
+For customers attempting to upgrade their existing deployment of {partner-product-short-name}, perform the following steps:
+
+. Download the latest template file from GitHub. On the partner solution page look for the *View the source code for this Partner Solution*. Within GitHub, select the *template* folder to see the latest CloudFormation template. Download the template. 
+. In the AWS Management Console, choose *Services > CloudFormation*.
+. Choose the existing Virtual Care stack. 
+. Choose *Update* and on the Update stack page, choose *Replace current template* and upload the template file. Choose *Next*.
+. On the Specify stack details page, review the stack settings and update the Control Region (e.g. us-east-1) and Messaging Region (e.g. us-east-1). Choose *Next*.
+. On the Configure stack options page, review the changes and select *Next*.
+. On the Review page, review and confirm template settings. Under *Capabilities*, select all of the check boxes to acknowledge that the template creates AWS Identity and Access Management (IAM) resources that might require the ability to automatically expand macros.
+. Choose *Submit*. The stack takes about 5 minutes to update.
+. Monitor the stack's status, and when the status is *UPDATE_COMPLETE*, the {partner-product-name} deployment is ready.  
