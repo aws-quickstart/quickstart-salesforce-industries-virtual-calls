@@ -858,6 +858,7 @@ p.footer-text a{color:#d7d8d8}
 <li><a href="#_costs_and_licenses">Costs and licenses</a></li>
 <li><a href="#_architecture">Architecture</a></li>
 <li><a href="#_deployment_options">Deployment options</a></li>
+<li><a href="#_upgrade_an_existing_deployment_of_virtual_calls">Upgrade an existing deployment of Virtual Calls</a></li>
 <li><a href="#_predeployment_steps">Predeployment steps</a></li>
 <li><a href="#_deployment_steps">Deployment steps</a></li>
 <li><a href="#_postdeployment_steps">Postdeployment steps</a></li>
@@ -879,14 +880,14 @@ p.footer-text a{color:#d7d8d8}
 </div>
 </div>
 <div class="paragraph text-center">
-<p><strong>January 2023</strong><br>
+<p><strong>March 2023</strong><br>
 <em>Conor Fanlo, Arunkumar Tharanichelvan, and Aditya Poorsala, Salesforce, Inc.</em><br>
 <em>Chris Riley and Ariana Rahgozar, AWS Strategic Accounts team</em><br>
 <em>Vinod Shukla, AWS Integration &amp; Automation team</em><br></p>
 </div>
 <div class="imageblock text-left image-container">
 <div class="content">
-<img src="https://aws-quickstart.s3.amazonaws.com/quickstart-salesforce-health-cloud-virtual-care/docs/boilerplate/.images/aws-quickstart-graphic.png" alt="">
+<img src="https://aws-quickstart.s3.amazonaws.com/quickstart-salesforce-industries-virtual-calls/docs/boilerplate/.images/aws-quickstart-graphic.png" alt="">
 </div>
 </div>
 <div class="admonitionblock tip">
@@ -896,7 +897,7 @@ p.footer-text a{color:#d7d8d8}
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Refer to the <a href="https://github.com/aws-quickstart/quickstart-salesforce-health-cloud-virtual-care" target="_blank" rel="noopener">GitHub repository</a> to view source files, report bugs, submit feature ideas, and post feedback about this Partner Solution. To comment on the documentation, refer to <a href="#_feedback">Feedback</a>.
+Refer to the <a href="https://github.com/aws-quickstart/quickstart-salesforce-industries-virtual-calls" target="_blank" rel="noopener">GitHub repository</a> to view source files, report bugs, submit feature ideas, and post feedback about this Partner Solution. To comment on the documentation, refer to <a href="#_feedback">Feedback</a>.
 </td>
 </tr>
 </table>
@@ -921,7 +922,7 @@ Refer to the <a href="https://github.com/aws-quickstart/quickstart-salesforce-he
 <h2 id="_costs_and_licenses">Costs and licenses</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This Partner Solution integrates various AWS services with a Salesforce Health Cloud. To receive support from AWS, you must enroll in either AWS Business Support or a higher support plan. For details and costs, refer to <a href="https://aws.amazon.com/premiumsupport/plans/" target="_blank" rel="noopener">Compare AWS Support Plans</a>.</p>
+<p>This Partner Solution integrates various AWS services with Industry Cloud(s). To receive support from AWS, you must enroll in either AWS Business Support or a higher support plan. For details and costs, refer to <a href="https://aws.amazon.com/premiumsupport/plans/" target="_blank" rel="noopener">Compare AWS Support Plans</a>.</p>
 </div>
 <div class="paragraph">
 <p>There is no cost to use this Partner Solution, but you will be billed for any AWS services or resources that this solution deploys. For more information, refer to the <a href="https://fwd.aws/rA69w?" target="_blank" rel="noopener">AWS Partner Solutions General Information Guide</a>.</p>
@@ -999,6 +1000,64 @@ AWS Cloud.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_upgrade_an_existing_deployment_of_virtual_calls">Upgrade an existing deployment of Virtual Calls</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you&#8217;ve already deployed Virtual Calls and just need to upgrade your existing deployment, perform the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Do the following steps to download the latest template file from GitHub:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Navigate to the <a href="https://fwd.aws/VVvWr?" target="_blank" rel="noopener">Partner Solution landing page</a>.</p>
+</li>
+<li>
+<p>Choose <strong>View the source code for this Partner Solution</strong> to open the GitHub repository.</p>
+</li>
+<li>
+<p>Open the <strong>template</strong> folder to access the latest CloudFormation template.</p>
+</li>
+<li>
+<p>Download the template.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>In the AWS Management Console, choose <strong>Services &gt; CloudFormation</strong>.</p>
+</li>
+<li>
+<p>Choose the existing Virtual Care stack.</p>
+</li>
+<li>
+<p>Choose <strong>Update</strong> to open the <strong>Update stack</strong> page.</p>
+</li>
+<li>
+<p>Choose <strong>Replace current template</strong>, and upload the template file. Choose <strong>Next</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Specify stack details</strong> page, review the stack settings and update the control Region (for example, us-east-1) and messaging Region (for example, us-east-1). Choose <strong>Next</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Configure stack options</strong> page, review the changes and choose <strong>Next</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Review</strong> page, review and confirm template settings. Under <strong>Capabilities</strong>, select all of the check boxes to acknowledge that the template creates AWS Identity and Access Management (IAM) resources that might require the ability to automatically expand macros.</p>
+</li>
+<li>
+<p>Choose <strong>Submit</strong>. The stack takes about 5 minutes to update.</p>
+</li>
+<li>
+<p>Monitor the stack&#8217;s status, and when the status is <strong>UPDATE_COMPLETE</strong>, the Salesforce Industries: Virtual Calls deployment is ready.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_predeployment_steps">Predeployment steps</h2>
 <div class="sectionbody">
 <div class="olist arabic">
@@ -1021,7 +1080,7 @@ AWS Cloud.</p>
 <div class="olist arabic">
 <ol class="arabic" start="2">
 <li>
-<p>Configure a Salesforce-connected app to integrate the events generated in AWS that are sent via Amazon EventBridge to Salesforce platform events. For instructions, refer to <a href="https://help.salesforce.com/s/articleView?id=sf.admin_virtual_care_connect_amazon_to_salesforce.htm&amp;type=5" target="_blank" rel="noopener">Connect Amazon to Salesforce</a>.</p>
+<p>Configure a Salesforce-connected app to integrate the events generated in AWS that are sent via Amazon EventBridge to Salesforce platform events. For instructions, refer to <a href="https://help.salesforce.com/s/articleView?id=sf.video_call_connect_amazon_to_salesforce.htm&amp;type=5" target="_blank" rel="noopener">Connect Amazon to Salesforce</a>.</p>
 </li>
 </ol>
 </div>
@@ -1079,7 +1138,7 @@ Unless you&#8217;re customizing the Partner Solution templates or are instructed
 <h2 id="_postdeployment_steps">Postdeployment steps</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Configure a <a href="https://help.salesforce.com/s/articleView?id=sf.admin_virtual_care_create_a_named_credential.htm&amp;type=5" target="_blank" rel="noopener">Salesforce Named Credential</a> so that Virtual Calls can invoke AWS services.</p>
+<p>Configure a <a href="https://help.salesforce.com/s/articleView?id=sf.video_call_create_a_named_credential.htm&amp;type=5" target="_blank" rel="noopener">Salesforce Named Credential</a> so that Virtual Calls can invoke AWS services.</p>
 </div>
 <div class="paragraph">
 <p>To use AWS Identity and Access Management (IAM) to retrieve the user&#8217;s access key and secret that&#8217;s generated by this Partner Solution, do the following steps:</p>
@@ -1131,21 +1190,21 @@ Unless you&#8217;re customizing the Partner Solution templates or are instructed
 <h2 id="_feedback">Feedback</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To submit feature ideas and report bugs, use the <strong>Issues</strong> section of the <a href="https://github.com/aws-quickstart/quickstart-salesforce-health-cloud-virtual-care" target="_blank" rel="noopener">GitHub repository</a> for this Partner Solution. To submit code, refer to the <a href="https://fwd.aws/NwqYA?" target="_blank" rel="noopener">Partner Solution Contributor&#8217;s Guide</a>. To submit feedback on this deployment guide, use the following GitHub links:</p>
+<p>To submit feature ideas and report bugs, use the <strong>Issues</strong> section of the <a href="https://github.com/aws-quickstart/quickstart-salesforce-industries-virtual-calls" target="_blank" rel="noopener">GitHub repository</a> for this Partner Solution. To submit code, refer to the <a href="https://fwd.aws/NwqYA?" target="_blank" rel="noopener">Partner Solution Contributor&#8217;s Guide</a>. To submit feedback on this deployment guide, use the following GitHub links:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://github.com/aws-quickstart/quickstart-salesforce-health-cloud-virtual-care/issues/new?labels=documentation,grammar+or+spelling&amp;title=Deployment+guide+feedback&amp;body=Section+heading:%0ADocumentation+issue+description:%0A" target="_blank" rel="noopener">Grammar or spelling</a></p>
+<p><a href="https://github.com/aws-quickstart/quickstart-salesforce-industries-virtual-calls/issues/new?labels=documentation,grammar+or+spelling&amp;title=Deployment+guide+feedback&amp;body=Section+heading:%0ADocumentation+issue+description:%0A" target="_blank" rel="noopener">Grammar or spelling</a></p>
 </li>
 <li>
-<p><a href="https://github.com/aws-quickstart/quickstart-salesforce-health-cloud-virtual-care/issues/new?labels=documentation,broken+link&amp;title=Deployment+guide+feedback&amp;body=Section+heading:%0ADocumentation+issue+description:%0A" target="_blank" rel="noopener">Broken link</a></p>
+<p><a href="https://github.com/aws-quickstart/quickstart-salesforce-industries-virtual-calls/issues/new?labels=documentation,broken+link&amp;title=Deployment+guide+feedback&amp;body=Section+heading:%0ADocumentation+issue+description:%0A" target="_blank" rel="noopener">Broken link</a></p>
 </li>
 <li>
-<p><a href="https://github.com/aws-quickstart/quickstart-salesforce-health-cloud-virtual-care/issues/new?labels=documentation,inaccurate+content&amp;title=Deployment+guide+feedback&amp;body=Section+heading:%0ADocumentation+issue+description:%0A" target="_blank" rel="noopener">Inaccurate content</a></p>
+<p><a href="https://github.com/aws-quickstart/quickstart-salesforce-industries-virtual-calls/issues/new?labels=documentation,inaccurate+content&amp;title=Deployment+guide+feedback&amp;body=Section+heading:%0ADocumentation+issue+description:%0A" target="_blank" rel="noopener">Inaccurate content</a></p>
 </li>
 <li>
-<p><a href="https://github.com/aws-quickstart/quickstart-salesforce-health-cloud-virtual-care/issues/new?labels=documentation,display+and+design&amp;title=Deployment+guide+feedback&amp;body=Section+heading:%0ADocumentation+issue+description:%0A" target="_blank" rel="noopener">Display or design</a></p>
+<p><a href="https://github.com/aws-quickstart/quickstart-salesforce-industries-virtual-calls/issues/new?labels=documentation,display+and+design&amp;title=Deployment+guide+feedback&amp;body=Section+heading:%0ADocumentation+issue+description:%0A" target="_blank" rel="noopener">Display or design</a></p>
 </li>
 </ul>
 </div>
@@ -1175,7 +1234,7 @@ Unless you&#8217;re customizing the Partner Solution templates or are instructed
 </html>
 <!--
 repo commit:
-76b8f1eff51067114f608ef2f03042aa8024e7a7
+18ad49391ee9788c6ab603589ae563e8c73fd3f9
 
 submodule config:
  7fa56a2f3f3ee511f887dd638f655e0c141bc19b docs/boilerplate (7fa56a2)
