@@ -14,7 +14,7 @@ If you've already deployed {partner-product-short-name} and just need to upgrade
 .. Open the *template* folder to access the latest CloudFormation template. 
 .. Download the template. 
 . In the AWS Management Console, choose *Services > CloudFormation*.
-. Choose the existing {partner-product-short-name} stack. 
+. Choose the existing Virtual Care stack. 
 . Choose *Update* to open the *Update stack* page.
 . Choose *Replace current template*, and upload the template file. Choose *Next*.
 . On the *Specify stack details* page, review the stack settings and update the control Region (for example, us-east-1) and messaging Region (for example, us-east-1). Choose *Next*.
